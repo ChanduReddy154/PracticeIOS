@@ -13,13 +13,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-    }
-
-    @IBAction func emailField(_ sender: Any) {
         
     }
+
+    @IBOutlet weak var emailField: UITextField!
     
     
+    @IBOutlet weak var passwordField: UITextField!
     
+    @IBOutlet weak var contactNumber: UITextField!
+    
+    @IBOutlet weak var fullName: UITextField!
 }
 

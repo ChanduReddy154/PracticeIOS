@@ -24,6 +24,7 @@
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <connections>
+                                    <action selector="Password:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="X4D-Hl-wQi"/>
                                     <action selector="emailField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="gzg-5P-rF6"/>
                                 </connections>
                             </textField>
@@ -42,7 +43,7 @@
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
-                                    <action selector="emailField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Jee-Nv-PYb"/>
+                                    <action selector="emailField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="qPU-oB-uUd"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" clearsOnBeginEditing="YES" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ntt-9W-Aln">
@@ -65,6 +66,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="b2f-b5-qZH"/>
+                    <connections>
+                        <outlet property="contactNumber" destination="Ci4-bA-CZb" id="NHa-bz-qCM"/>
+                        <outlet property="emailField" destination="fjR-Ui-ow8" id="99V-Ic-xl5"/>
+                        <outlet property="fullName" destination="Ntt-9W-Aln" id="h8o-hJ-zqh"/>
+                        <outlet property="passwordField" destination="Nux-FR-YOm" id="Rb3-WI-r1h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
