@@ -16,13 +16,6 @@ class ViewController: UIViewController {
         
     }
 
-    @IBOutlet weak var emailField: UITextField!
     
-    
-    @IBOutlet weak var passwordField: UITextField!
-    
-    @IBOutlet weak var contactNumber: UITextField!
-    
-    @IBOutlet weak var fullName: UITextField!
 }
 
