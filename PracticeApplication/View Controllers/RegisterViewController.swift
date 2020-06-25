@@ -42,7 +42,7 @@ class RegisterViewController: UIViewController {
             emailField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             passwordField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             phoneNumberField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
-            return "Please fill the the fields"
+            return "Please fill all the fields"
         }
         // check the password validation
         let passVal = passwordField.text!.trimmingCharacters(in: .whitespacesAndNewlines)

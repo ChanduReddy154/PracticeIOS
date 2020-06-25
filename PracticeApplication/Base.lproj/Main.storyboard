@@ -93,7 +93,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="hTP-Va-KQh">
-                                <rect key="frame" x="50" y="138" width="275" height="280"/>
+                                <rect key="frame" x="50" y="138" width="275" height="270"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="justified" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="jDg-n6-L9P">
                                         <rect key="frame" x="0.0" y="0.0" width="275" height="50"/>
@@ -129,13 +129,10 @@
                                             <action selector="loginButtonTapped:" destination="Y9O-xR-3nl" eventType="touchUpInside" id="trg-ow-vtx"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whT-uK-7Bc">
-                                        <rect key="frame" x="0.0" y="240" width="275" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="CIK-J5-r4l"/>
-                                        </constraints>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whT-uK-7Bc">
+                                        <rect key="frame" x="0.0" y="240" width="275" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <color key="textColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -163,7 +160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QNj-oH-qb9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3634.4000000000001" y="-101.23152709359606"/>
+            <point key="canvasLocation" x="3612" y="-183"/>
         </scene>
         <!--Home Page View Controller-->
         <scene sceneID="4PR-hD-R63">
@@ -209,7 +206,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="fQN-ve-H8j">
-                                <rect key="frame" x="50" y="138" width="275" height="530"/>
+                                <rect key="frame" x="50" y="138" width="275" height="510"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="FullName" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="26n-74-n07">
                                         <rect key="frame" x="0.0" y="0.0" width="275" height="50"/>
@@ -257,17 +254,14 @@
                                             <action selector="registerButtonTapped:" destination="J3t-E2-fKJ" eventType="touchUpInside" id="5J7-5r-AQQ"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qak-5r-3mF">
-                                        <rect key="frame" x="0.0" y="400" width="275" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="dEa-Y7-Cw9"/>
-                                        </constraints>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qak-5r-3mF">
+                                        <rect key="frame" x="0.0" y="400" width="275" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <color key="textColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esA-6D-eLn">
-                                        <rect key="frame" x="0.0" y="480" width="275" height="50"/>
+                                        <rect key="frame" x="0.0" y="460" width="275" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="NPQ-yl-f4L"/>
                                         </constraints>
@@ -304,7 +298,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7XF-M3-1Bu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3632.8000000000002" y="643.5960591133005"/>
+            <point key="canvasLocation" x="3612" y="563"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HWz-Ng-mby">
@@ -333,6 +327,6 @@
         <image name="background" width="180" height="320"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BV1-Tg-qWx"/>
+        <segue reference="Sdz-j1-857"/>
     </inferredMetricsTieBreakers>
 </document>

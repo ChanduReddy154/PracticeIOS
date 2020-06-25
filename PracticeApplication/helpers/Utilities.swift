@@ -23,7 +23,7 @@ class Utilities {
     }
     
     static func isValidPhone(_ phone : String) -> Bool {
-        let phoneRegex = "^[0-9+]{0,1}+[0-9]{10,10}$"
+        let phoneRegex = "^[7-9][0-9]{9}$"
         let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneRegex)
         return phoneTest.evaluate(with: phone)
     }
