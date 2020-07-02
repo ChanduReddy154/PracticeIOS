@@ -44,16 +44,17 @@ class RegisterViewController: UIViewController {
             phoneNumberField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             return "Please fill all the fields"
         }
+        // check the email validation
+               let emailVal = emailField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+               if Utilities.isValidEmail(emailVal) == false {
+                   return "email must be valid"
+               }
         // check the password validation
         let passVal = passwordField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         if Utilities.isValidPassword(passVal) == false {
             return "password must be atleast 6 characters with alteast 1 numeric, 1 capital and 1 special character"
         }
-        // check the email validation
-        let emailVal = emailField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        if Utilities.isValidEmail(emailVal) == false {
-            return "email must be valid"
-        }
+       
         // check the phoneNumber validation
         let phoneVal = phoneNumberField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         if Utilities.isValidPhone(phoneVal) ==  false {
@@ -77,13 +78,13 @@ class RegisterViewController: UIViewController {
             Auth.auth().createUser(withEmail: email, password: pass) { (result, err) in
                 // check there is an any error
                 if err != nil {
-                    self.errorMessage("error while creating the user")
+                    self.errorMessage("Email already exists")
                 }else {
                     // the user created successfully
                     let db = Firestore.firestore()
                     db.collection("users").addDocument(data: ["fullName":fullName, "phoneNumber":phoneNum, "uid": result!.user.uid]) { (er) in
                         if er != nil {
-                            self.errorMessage("please enter the data again and submit the details")
+                            self.errorMessage("Please enter the data again and submit the details")
                         }
                     }
                     // Transition to the homeScreen

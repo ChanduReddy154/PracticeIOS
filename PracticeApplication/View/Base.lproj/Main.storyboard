@@ -15,11 +15,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Toucan-Bird-4K-Ultra-HD-Mobile-Wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="RFG-F2-YEU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="602"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="eL4-0i-DBN">
-                                <rect key="frame" x="40" y="608" width="295" height="130"/>
+                                <rect key="frame" x="50" y="632" width="275" height="130"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I29-8g-PAc">
-                                        <rect key="frame" x="0.0" y="0.0" width="295" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="50"/>
                                         <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="yed-EI-NOT"/>
@@ -38,7 +41,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGu-7z-j7n">
-                                        <rect key="frame" x="0.0" y="80" width="295" height="50"/>
+                                        <rect key="frame" x="0.0" y="80" width="275" height="50"/>
                                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="AVz-8P-nZh"/>
@@ -59,19 +62,16 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Toucan-Bird-4K-Ultra-HD-Mobile-Wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="Jpg-Cw-2Di">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
-                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.55712491207458603" green="0.69668319841015225" blue="0.45674867314357454" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="rql-Rk-AaF" firstAttribute="trailing" secondItem="eL4-0i-DBN" secondAttribute="trailing" constant="40" id="8YN-pf-lDp"/>
-                            <constraint firstItem="rql-Rk-AaF" firstAttribute="bottom" secondItem="eL4-0i-DBN" secondAttribute="bottom" constant="40" id="95j-dW-8A1"/>
-                            <constraint firstItem="eL4-0i-DBN" firstAttribute="leading" secondItem="rql-Rk-AaF" secondAttribute="leading" constant="40" id="ZNs-g3-gIc"/>
-                            <constraint firstItem="Jpg-Cw-2Di" firstAttribute="top" secondItem="3Zy-xM-8fT" secondAttribute="top" id="iNY-l8-tvQ"/>
-                            <constraint firstItem="eL4-0i-DBN" firstAttribute="top" secondItem="Jpg-Cw-2Di" secondAttribute="bottom" constant="8" id="kzc-SE-2Nu"/>
-                            <constraint firstItem="Jpg-Cw-2Di" firstAttribute="trailing" secondItem="rql-Rk-AaF" secondAttribute="trailing" id="oHe-4o-8YZ"/>
-                            <constraint firstItem="Jpg-Cw-2Di" firstAttribute="leading" secondItem="rql-Rk-AaF" secondAttribute="leading" id="xKd-mq-PtU"/>
+                            <constraint firstItem="eL4-0i-DBN" firstAttribute="leading" secondItem="3Zy-xM-8fT" secondAttribute="leading" constant="50" id="N2e-0J-SOO"/>
+                            <constraint firstItem="eL4-0i-DBN" firstAttribute="top" secondItem="RFG-F2-YEU" secondAttribute="bottom" constant="30" id="P55-5d-2hX"/>
+                            <constraint firstItem="RFG-F2-YEU" firstAttribute="leading" secondItem="3Zy-xM-8fT" secondAttribute="leading" id="fp7-B1-xWC"/>
+                            <constraint firstAttribute="trailing" secondItem="eL4-0i-DBN" secondAttribute="trailing" constant="50" id="mGs-il-DYP"/>
+                            <constraint firstItem="RFG-F2-YEU" firstAttribute="top" secondItem="3Zy-xM-8fT" secondAttribute="top" id="re5-e5-duw"/>
+                            <constraint firstAttribute="trailing" secondItem="RFG-F2-YEU" secondAttribute="trailing" id="rur-vy-sK9"/>
+                            <constraint firstAttribute="bottom" secondItem="eL4-0i-DBN" secondAttribute="bottom" constant="50" id="yii-pl-NOK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rql-Rk-AaF"/>
                     </view>
@@ -95,23 +95,27 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="hTP-Va-KQh">
                                 <rect key="frame" x="50" y="138" width="275" height="270"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="justified" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="jDg-n6-L9P">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="chandu@gmail.com" borderStyle="roundedRect" placeholder="Email" textAlignment="justified" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="jDg-n6-L9P">
                                         <rect key="frame" x="0.0" y="0.0" width="275" height="50"/>
-                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="vTi-OL-Utj"/>
                                         </constraints>
-                                        <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="done" smartQuotesType="no"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BBE-W6-UI5">
+                                    <textField opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Chandu@1" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BBE-W6-UI5">
                                         <rect key="frame" x="0.0" y="80" width="275" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="xoa-Xy-bYn"/>
                                         </constraints>
-                                        <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
@@ -156,6 +160,7 @@
                         <outlet property="errorLabel" destination="whT-uK-7Bc" id="aJ0-HZ-sxZ"/>
                         <outlet property="loginButton" destination="S72-yO-9sa" id="apC-OG-pi3"/>
                         <outlet property="passwordField" destination="BBE-W6-UI5" id="pae-B5-WeF"/>
+                        <segue destination="dq3-5M-tL6" kind="show" id="ehu-H8-IUk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QNj-oH-qb9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -166,12 +171,12 @@
         <scene sceneID="4PR-hD-R63">
             <objects>
                 <viewController storyboardIdentifier="HomeVC" id="dq3-5M-tL6" customClass="HomePageViewController" customModule="PracticeApplication" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="THT-u0-skK">
+                    <view key="view" userInteractionEnabled="NO" contentMode="scaleToFill" id="THT-u0-skK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTG-Gw-7aj">
-                                <rect key="frame" x="66" y="144" width="243" height="50"/>
+                                <rect key="frame" x="66" y="188" width="243" height="50"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="mfw-s1-rfc"/>
@@ -189,6 +194,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aBu-he-D5I"/>
                     </view>
+                    <navigationItem key="navigationItem" id="xG4-uL-qw4">
+                        <barButtonItem key="leftBarButtonItem" title="menu" id="Yzo-7u-zQp"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psD-vW-te1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -303,7 +311,7 @@
         <!--Navigation Controller-->
         <scene sceneID="HWz-Ng-mby">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnSwipe="YES" hidesBarsOnTap="YES" hidesBarsWhenKeyboardAppears="YES" hidesBarsWhenVerticallyCompact="YES" id="cpJ-IV-5qs" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnTap="YES" id="cpJ-IV-5qs" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UAh-TL-2rd">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
