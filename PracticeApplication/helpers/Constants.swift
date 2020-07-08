@@ -11,7 +11,8 @@ import Foundation
 struct Constants {
     struct StoryBoard {
          static let homeViewController = "HomeVC"
-        
-        
+         static let registerChat = "RegisterToChat"
+         static let loginChat = "LoginToChat"
+         static let chatView = "ChatVC"
     }
 }

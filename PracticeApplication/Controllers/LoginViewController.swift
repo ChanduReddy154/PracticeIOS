@@ -62,7 +62,7 @@ class LoginViewController: UIViewController {
                 if error != nil {
                     self.errorMessage("email or password are incorrect")
                 }else {
-                    self.transitionHomeController()
+                    self.performSegue(withIdentifier: Constants.StoryBoard.loginChat, sender: self)
                 }
                 
             }
@@ -73,10 +73,10 @@ class LoginViewController: UIViewController {
         errorLabel.text = message
         errorLabel.alpha = 1
     }
-    func transitionHomeController() {
-        let homeViewController = storyboard?.instantiateViewController(identifier: Constants.StoryBoard.homeViewController) as?
-        HomePageViewController
-        view.window?.rootViewController = homeViewController
-        view.window?.makeKeyAndVisible()
-    }
+//    func transitionHomeController() {
+//        let homeViewController = storyboard?.instantiateViewController(identifier: Constants.StoryBoard.homeViewController) as?
+//        HomeViewController
+//        view.window?.rootViewController = homeViewController
+//        view.window?.makeKeyAndVisible()
+//    }
 }

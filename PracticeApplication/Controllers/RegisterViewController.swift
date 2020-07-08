@@ -88,7 +88,7 @@ class RegisterViewController: UIViewController {
                         }
                     }
                     // Transition to the homeScreen
-                    self.transitionHome()
+                    self.performSegue(withIdentifier: Constants.StoryBoard.registerChat , sender: self)
                 }
             }
         }
@@ -100,11 +100,11 @@ class RegisterViewController: UIViewController {
         errorLabel.text = message
         errorLabel.alpha = 3
     }
-    func transitionHome() {
-        let homeViewController = storyboard?.instantiateViewController(identifier: Constants.StoryBoard.homeViewController) as?
-        HomePageViewController
-        view.window?.rootViewController = homeViewController
-        view.window?.makeKeyAndVisible()
-    }
+//    func transitionHome() {
+//        let homeViewController = storyboard?.instantiateViewController(identifier: Constants.StoryBoard.homeViewController) as?
+//        HomeViewController
+//        view.window?.rootViewController = homeViewController
+//        view.window?.makeKeyAndVisible()
+//    }
 
 }
