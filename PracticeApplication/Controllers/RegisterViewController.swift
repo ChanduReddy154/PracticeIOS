@@ -81,8 +81,8 @@ class RegisterViewController: UIViewController {
                     self.errorMessage("Email already exists")
                 }else {
                     // the user created successfully
-                    let db = Firestore.firestore()
-                    db.collection("users").addDocument(data: ["fullName":fullName, "phoneNumber":phoneNum, "uid": result!.user.uid]) { (er) in
+                     let db = Firestore.firestore()
+                   db.collection("users").addDocument(data: ["fullName":fullName, "phoneNumber":phoneNum, "uid": result!.user.uid]) { (er) in
                         if er != nil {
                             self.errorMessage("Please enter the data again and submit the details")
                         }

@@ -3,6 +3,7 @@
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -91,6 +92,7 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Nbb-iC-lPW">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" red="1" green="0.88241467124951556" blue="0.43601864558650072" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="hTP-Va-KQh">
                                 <rect key="frame" x="50" y="138" width="275" height="270"/>
@@ -348,29 +350,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EMa-cV-HJP">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EMa-cV-HJP">
                                 <rect key="frame" x="0.0" y="88" width="375" height="620"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Reusable Identifier" id="KGv-yg-Tbg">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KGv-yg-Tbg" id="qP2-b8-kjY">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ru-5K-lqa">
                                 <rect key="frame" x="26" y="716" width="323" height="62"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Message" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bvo-YR-uD8">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bvo-YR-uD8">
                                         <rect key="frame" x="5" y="8.6666666666666288" width="258" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="Ffl-rV-NUr"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVf-uK-bzR">
@@ -379,6 +371,9 @@
                                             <constraint firstAttribute="height" constant="30" id="2cU-gE-hb4"/>
                                         </constraints>
                                         <state key="normal" image="paperplane.fill" catalog="system" backgroundImage="shadow"/>
+                                        <connections>
+                                            <action selector="sendButtonTapped:" destination="nzE-q9-8qj" eventType="touchUpInside" id="sYd-0J-5if"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -391,7 +386,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="blue"/>
                         <constraints>
                             <constraint firstItem="nRY-rK-ibp" firstAttribute="bottom" secondItem="EMa-cV-HJP" secondAttribute="bottom" constant="70" id="8YD-4t-NCu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2Ru-5K-lqa" secondAttribute="trailing" constant="10" id="DXf-li-0iB"/>
@@ -405,6 +400,10 @@
                         <viewLayoutGuide key="safeArea" id="nRY-rK-ibp"/>
                     </view>
                     <navigationItem key="navigationItem" id="sg9-Fu-Wer"/>
+                    <connections>
+                        <outlet property="inputTextMessage" destination="Bvo-YR-uD8" id="CMr-jX-5Cy"/>
+                        <outlet property="tableView" destination="EMa-cV-HJP" id="ww8-eF-lca"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wxu-am-oLb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -438,6 +437,9 @@
         <image name="homeback" width="310.33334350585938" height="552"/>
         <image name="paperplane.fill" catalog="system" width="64" height="60"/>
         <image name="shadow" width="916" height="299"/>
+        <namedColor name="blue">
+            <color red="0.20800000429153442" green="0.9089999794960022" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="C1u-xs-9oD"/>

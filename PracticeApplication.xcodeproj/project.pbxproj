@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,8 +11,12 @@
 		1B380FF424A37B0F00068A41 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B380FF324A37B0F00068A41 /* Utilities.swift */; };
 		1B55558E24A39C9000B4EB4C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B55558D24A39C9000B4EB4C /* Constants.swift */; };
 		1B5F160424B5BE9C001E354A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5F160324B5BE9C001E354A /* HomeViewController.swift */; };
-		1B5F160624B5C13C001E354A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B5F160524B5C13C001E354A /* Assets.xcassets */; };
 		1B5F160824B5EFC0001E354A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5F160724B5EFC0001E354A /* ChatViewController.swift */; };
+		1BBF224124B747E3009739E1 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBF224024B747E3009739E1 /* Messages.swift */; };
+		1BBF224424B7528D009739E1 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBF224224B7528D009739E1 /* MessageCell.swift */; };
+		1BBF224524B7528D009739E1 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BBF224324B7528D009739E1 /* MessageCell.xib */; };
+		1BBF224724B77101009739E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BBF224624B77100009739E1 /* Assets.xcassets */; };
+		1BBF224A24B79233009739E1 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1BBF224924B79233009739E1 /* IQKeyboardManagerSwift */; };
 		1BE286EB24694E220019F779 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE286EA24694E220019F779 /* AppDelegate.swift */; };
 		1BE286ED24694E220019F779 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE286EC24694E220019F779 /* SceneDelegate.swift */; };
 		1BE286EF24694E220019F779 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE286EE24694E220019F779 /* ViewController.swift */; };
@@ -29,8 +33,11 @@
 		1B380FF324A37B0F00068A41 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		1B55558D24A39C9000B4EB4C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1B5F160324B5BE9C001E354A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		1B5F160524B5C13C001E354A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		1B5F160724B5EFC0001E354A /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		1BBF224024B747E3009739E1 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		1BBF224224B7528D009739E1 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		1BBF224324B7528D009739E1 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		1BBF224624B77100009739E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = PracticeApplication/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		1BE286E724694E220019F779 /* PracticeApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticeApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BE286EA24694E220019F779 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BE286EC24694E220019F779 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +57,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0D8A14D2641005F6B5758E3 /* Pods_PracticeApplication.framework in Frameworks */,
+				1BBF224A24B79233009739E1 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				1BE286F024694E220019F779 /* Main.storyboard */,
+				1BBF224224B7528D009739E1 /* MessageCell.swift */,
+				1BBF224324B7528D009739E1 /* MessageCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -88,6 +98,7 @@
 		1BBBA9E524ACAA0E00AEB05C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1BBF224024B747E3009739E1 /* Messages.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -119,8 +130,8 @@
 				1BBBA9E524ACAA0E00AEB05C /* Model */,
 				1BBBA9E424ACA9DF00AEB05C /* View */,
 				1B7949F824A237EB006E9B52 /* Controllers */,
+				1BBF224624B77100009739E1 /* Assets.xcassets */,
 				1BE286F524694E230019F779 /* LaunchScreen.storyboard */,
-				1B5F160524B5C13C001E354A /* Assets.xcassets */,
 				1BE286F824694E230019F779 /* Info.plist */,
 				1B04718024A36DC500680E9A /* GoogleService-Info.plist */,
 			);
@@ -162,6 +173,9 @@
 			dependencies = (
 			);
 			name = PracticeApplication;
+			packageProductDependencies = (
+				1BBF224924B79233009739E1 /* IQKeyboardManagerSwift */,
+			);
 			productName = PracticeApplication;
 			productReference = 1BE286E724694E220019F779 /* PracticeApplication.app */;
 			productType = "com.apple.product-type.application";
@@ -190,6 +204,9 @@
 				Base,
 			);
 			mainGroup = 1BE286DE24694E220019F779;
+			packageReferences = (
+				1BBF224824B79233009739E1 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = 1BE286E824694E220019F779 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -204,10 +221,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BBF224524B7528D009739E1 /* MessageCell.xib in Resources */,
 				1BE286F724694E230019F779 /* LaunchScreen.storyboard in Resources */,
 				1B04718124A36DC500680E9A /* GoogleService-Info.plist in Resources */,
-				1B5F160624B5C13C001E354A /* Assets.xcassets in Resources */,
 				1BE286F224694E220019F779 /* Main.storyboard in Resources */,
+				1BBF224724B77101009739E1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BBF224424B7528D009739E1 /* MessageCell.swift in Sources */,
 				1BE8577224A23B5200F392A1 /* LoginViewController.swift in Sources */,
 				1BE8577424A23B6400F392A1 /* RegisterViewController.swift in Sources */,
 				1B380FF424A37B0F00068A41 /* Utilities.swift in Sources */,
@@ -267,6 +286,7 @@
 				1BE286EF24694E220019F779 /* ViewController.swift in Sources */,
 				1BE286EB24694E220019F779 /* AppDelegate.swift in Sources */,
 				1BE286ED24694E220019F779 /* SceneDelegate.swift in Sources */,
+				1BBF224124B747E3009739E1 /* Messages.swift in Sources */,
 				1B5F160824B5EFC0001E354A /* ChatViewController.swift in Sources */,
 				1B55558E24A39C9000B4EB4C /* Constants.swift in Sources */,
 			);
@@ -468,6 +488,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1BBF224824B79233009739E1 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1BBF224924B79233009739E1 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1BBF224824B79233009739E1 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1BE286DF24694E220019F779 /* Project object */;
 }
