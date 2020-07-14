@@ -17,7 +17,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func chaqtButtonTapped(_ sender: UIButton) {
-        performSegue(withIdentifier: Constants.StoryBoard.chatView, sender: self)
+        performSegue(withIdentifier: Constants.StoryBoard.usersView, sender: self)
     }
     
   

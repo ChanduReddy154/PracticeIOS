@@ -98,7 +98,7 @@ class RegisterViewController: UIViewController {
     
     func errorMessage(_ message:String) {
         errorLabel.text = message
-        errorLabel.alpha = 3
+        errorLabel.alpha = 1
     }
 //    func transitionHome() {
 //        let homeViewController = storyboard?.instantiateViewController(identifier: Constants.StoryBoard.homeViewController) as?

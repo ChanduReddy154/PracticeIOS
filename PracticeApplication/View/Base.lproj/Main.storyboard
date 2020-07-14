@@ -335,12 +335,54 @@
                     </view>
                     <navigationItem key="navigationItem" id="uBF-PU-oA9"/>
                     <connections>
-                        <segue destination="nzE-q9-8qj" kind="show" identifier="ChatVC" id="sG0-Vj-aD9"/>
+                        <segue destination="EnL-eU-DRa" kind="show" identifier="UsersVC" id="W9b-nw-n3h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aD6-UO-WUY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4664.8000000000002" y="130.78817733990149"/>
+        </scene>
+        <!--Users View Controller-->
+        <scene sceneID="DOJ-4h-GFg">
+            <objects>
+                <viewController id="EnL-eU-DRa" customClass="UsersViewController" customModule="PracticeApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8lS-gL-MvY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vS2-Bi-QAb">
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UsersCell" id="Llf-WL-wI8">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Llf-WL-wI8" id="y0P-rj-pXr">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Tpi-D1-B1I" firstAttribute="bottom" secondItem="vS2-Bi-QAb" secondAttribute="bottom" id="9By-KM-ntc"/>
+                            <constraint firstItem="Tpi-D1-B1I" firstAttribute="trailing" secondItem="vS2-Bi-QAb" secondAttribute="trailing" id="JDz-N8-K69"/>
+                            <constraint firstItem="vS2-Bi-QAb" firstAttribute="leading" secondItem="Tpi-D1-B1I" secondAttribute="leading" id="Zeq-qH-g9n"/>
+                            <constraint firstItem="vS2-Bi-QAb" firstAttribute="top" secondItem="Tpi-D1-B1I" secondAttribute="top" id="sgX-fg-5O0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Tpi-D1-B1I"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4Op-QG-NCy"/>
+                    <connections>
+                        <outlet property="usersTable" destination="vS2-Bi-QAb" id="0Kv-qk-SlC"/>
+                        <segue destination="nzE-q9-8qj" kind="show" identifier="ChatVC" id="gkG-DF-ug2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2nJ-rd-IOt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6118" y="-183"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="oZj-BN-w6y">
@@ -370,7 +412,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="2cU-gE-hb4"/>
                                         </constraints>
-                                        <state key="normal" image="paperplane.fill" catalog="system" backgroundImage="shadow"/>
+                                        <state key="normal" image="paperplane.fill" catalog="system"/>
                                         <connections>
                                             <action selector="sendButtonTapped:" destination="nzE-q9-8qj" eventType="touchUpInside" id="sYd-0J-5if"/>
                                         </connections>
@@ -407,7 +449,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wxu-am-oLb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5741.6000000000004" y="130.78817733990149"/>
+            <point key="canvasLocation" x="6156" y="678"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HWz-Ng-mby">
@@ -436,13 +478,12 @@
         <image name="background" width="180" height="320"/>
         <image name="homeback" width="310.33334350585938" height="552"/>
         <image name="paperplane.fill" catalog="system" width="64" height="60"/>
-        <image name="shadow" width="916" height="299"/>
         <namedColor name="blue">
             <color red="0.20800000429153442" green="0.9089999794960022" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="C1u-xs-9oD"/>
-        <segue reference="BV1-Tg-qWx"/>
+        <segue reference="Sdz-j1-857"/>
     </inferredMetricsTieBreakers>
 </document>

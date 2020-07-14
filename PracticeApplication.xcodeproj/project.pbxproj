@@ -24,6 +24,8 @@
 		1BE286F724694E230019F779 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BE286F524694E230019F779 /* LaunchScreen.storyboard */; };
 		1BE8577224A23B5200F392A1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE8577124A23B5200F392A1 /* LoginViewController.swift */; };
 		1BE8577424A23B6400F392A1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE8577324A23B6400F392A1 /* RegisterViewController.swift */; };
+		1BFD496D24BE234700E58403 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFD496C24BE234700E58403 /* UsersViewController.swift */; };
+		1BFD496F24BE25C200E58403 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFD496E24BE25C200E58403 /* Users.swift */; };
 		C0D8A14D2641005F6B5758E3 /* Pods_PracticeApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9180A4927C5AED857195141B /* Pods_PracticeApplication.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +49,9 @@
 		1BE286F824694E230019F779 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BE8577124A23B5200F392A1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1BE8577324A23B6400F392A1 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		1BFD496C24BE234700E58403 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		1BFD496E24BE25C200E58403 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		1BFF747A24BC716A008AC561 /* PracticeApplication.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PracticeApplication.entitlements; sourceTree = "<group>"; };
 		6A7A86F4C08400977A3D5C56 /* Pods-PracticeApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeApplication.debug.xcconfig"; path = "Target Support Files/Pods-PracticeApplication/Pods-PracticeApplication.debug.xcconfig"; sourceTree = "<group>"; };
 		9180A4927C5AED857195141B /* Pods_PracticeApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PracticeApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -81,6 +86,7 @@
 				1BE8577324A23B6400F392A1 /* RegisterViewController.swift */,
 				1B5F160324B5BE9C001E354A /* HomeViewController.swift */,
 				1B5F160724B5EFC0001E354A /* ChatViewController.swift */,
+				1BFD496C24BE234700E58403 /* UsersViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -99,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				1BBF224024B747E3009739E1 /* Messages.swift */,
+				1BFD496E24BE25C200E58403 /* Users.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -124,6 +131,7 @@
 		1BE286E924694E220019F779 /* PracticeApplication */ = {
 			isa = PBXGroup;
 			children = (
+				1BFF747A24BC716A008AC561 /* PracticeApplication.entitlements */,
 				1BE286EA24694E220019F779 /* AppDelegate.swift */,
 				1BE286EC24694E220019F779 /* SceneDelegate.swift */,
 				1B55558C24A39C6F00B4EB4C /* helpers */,
@@ -279,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BBF224424B7528D009739E1 /* MessageCell.swift in Sources */,
+				1BFD496D24BE234700E58403 /* UsersViewController.swift in Sources */,
 				1BE8577224A23B5200F392A1 /* LoginViewController.swift in Sources */,
 				1BE8577424A23B6400F392A1 /* RegisterViewController.swift in Sources */,
 				1B380FF424A37B0F00068A41 /* Utilities.swift in Sources */,
@@ -286,6 +295,7 @@
 				1BE286EF24694E220019F779 /* ViewController.swift in Sources */,
 				1BE286EB24694E220019F779 /* AppDelegate.swift in Sources */,
 				1BE286ED24694E220019F779 /* SceneDelegate.swift in Sources */,
+				1BFD496F24BE25C200E58403 /* Users.swift in Sources */,
 				1BBF224124B747E3009739E1 /* Messages.swift in Sources */,
 				1B5F160824B5EFC0001E354A /* ChatViewController.swift in Sources */,
 				1B55558E24A39C9000B4EB4C /* Constants.swift in Sources */,
@@ -433,6 +443,7 @@
 			baseConfigurationReference = 6A7A86F4C08400977A3D5C56 /* Pods-PracticeApplication.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PracticeApplication/PracticeApplication.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VQWKMLNHP7;
 				INFOPLIST_FILE = PracticeApplication/Info.plist;
@@ -442,6 +453,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chandureddy.PracticeApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -452,6 +464,7 @@
 			baseConfigurationReference = 0F28C4E4AB37FD926CFEFEFE /* Pods-PracticeApplication.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PracticeApplication/PracticeApplication.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VQWKMLNHP7;
 				INFOPLIST_FILE = PracticeApplication/Info.plist;
@@ -461,6 +474,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chandureddy.PracticeApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

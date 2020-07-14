@@ -40,6 +40,8 @@ class ChatViewController: UIViewController {
                             self.message.append(newMessage)
                             DispatchQueue.main.async {
                                 self.tableView.reloadData()
+                                let indexpath1 = IndexPath(row: self.message.count-1, section: 0)
+                                self.tableView.scrollToRow(at: indexpath1, at: .top, animated: true)
                             }
                         }
                         
@@ -56,6 +58,9 @@ class ChatViewController: UIViewController {
                     print("Something went wrong\(e)")
                 }else {
                     print("successfully data added")
+                    DispatchQueue.main.async {
+                        self.inputTextMessage.text = ""
+                    }
                 }
             }
         }

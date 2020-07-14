@@ -14,5 +14,6 @@ struct Constants {
          static let registerChat = "RegisterToChat"
          static let loginChat = "LoginToChat"
          static let chatView = "ChatVC"
+         static let usersView = "UsersVC"
     }
 }
