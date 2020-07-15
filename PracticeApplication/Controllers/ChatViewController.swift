@@ -57,7 +57,6 @@ class ChatViewController: UIViewController {
                 if let e = err {
                     print("Something went wrong\(e)")
                 }else {
-                    print("successfully data added")
                     DispatchQueue.main.async {
                         self.inputTextMessage.text = ""
                     }

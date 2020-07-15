@@ -12,6 +12,7 @@
 		1B55558E24A39C9000B4EB4C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B55558D24A39C9000B4EB4C /* Constants.swift */; };
 		1B5F160424B5BE9C001E354A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5F160324B5BE9C001E354A /* HomeViewController.swift */; };
 		1B5F160824B5EFC0001E354A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5F160724B5EFC0001E354A /* ChatViewController.swift */; };
+		1BAAD81E24BEEBA900CB7395 /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAAD81D24BEEBA900CB7395 /* ForgotPassViewController.swift */; };
 		1BBF224124B747E3009739E1 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBF224024B747E3009739E1 /* Messages.swift */; };
 		1BBF224424B7528D009739E1 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBF224224B7528D009739E1 /* MessageCell.swift */; };
 		1BBF224524B7528D009739E1 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BBF224324B7528D009739E1 /* MessageCell.xib */; };
@@ -36,6 +37,7 @@
 		1B55558D24A39C9000B4EB4C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1B5F160324B5BE9C001E354A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1B5F160724B5EFC0001E354A /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		1BAAD81D24BEEBA900CB7395 /* ForgotPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
 		1BBF224024B747E3009739E1 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		1BBF224224B7528D009739E1 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		1BBF224324B7528D009739E1 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				1B5F160324B5BE9C001E354A /* HomeViewController.swift */,
 				1B5F160724B5EFC0001E354A /* ChatViewController.swift */,
 				1BFD496C24BE234700E58403 /* UsersViewController.swift */,
+				1BAAD81D24BEEBA900CB7395 /* ForgotPassViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 			files = (
 				1BBF224424B7528D009739E1 /* MessageCell.swift in Sources */,
 				1BFD496D24BE234700E58403 /* UsersViewController.swift in Sources */,
+				1BAAD81E24BEEBA900CB7395 /* ForgotPassViewController.swift in Sources */,
 				1BE8577224A23B5200F392A1 /* LoginViewController.swift in Sources */,
 				1BE8577424A23B6400F392A1 /* RegisterViewController.swift in Sources */,
 				1B380FF424A37B0F00068A41 /* Utilities.swift in Sources */,
