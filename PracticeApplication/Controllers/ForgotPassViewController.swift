@@ -49,7 +49,9 @@ class ForgotPassViewController: UIViewController {
                     //self.errorMessage("The reset link is sent to your mail")
                     let alert = UIAlertController(title: "ResetPassword", message: "The reset link is sent to your mail", preferredStyle: UIAlertController.Style.alert)
                     
-                    let alertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+                    let alertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { (action) in
+                        self.navigationController?.popToRootViewController(animated: true)
+                    }
                             alert.addAction(alertAction)
                             self.present(alert, animated: true)
                             
