@@ -97,7 +97,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="hTP-Va-KQh">
                                 <rect key="frame" x="50" y="138" width="275" height="336"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="chandu@gmail.com" borderStyle="roundedRect" placeholder="Email" textAlignment="justified" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="jDg-n6-L9P">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="chandureddy154@gmail.com" borderStyle="roundedRect" placeholder="Email" textAlignment="justified" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="jDg-n6-L9P">
                                         <rect key="frame" x="0.0" y="0.0" width="275" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -188,11 +188,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="98R-TB-WCo">
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Mrt-Qc-gcY"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="hOz-1w-Doz"/>
+                            </scrollView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="OQW-H4-EVT">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="fQN-ve-H8j">
-                                <rect key="frame" x="50" y="138" width="275" height="504"/>
+                                <rect key="frame" x="50" y="138" width="275" height="584"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="FullName" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="26n-74-n07">
                                         <rect key="frame" x="0.0" y="0.0" width="275" height="50"/>
@@ -218,8 +224,16 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ji-ox-4AT">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="DOB" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="41r-um-XNM">
                                         <rect key="frame" x="0.0" y="240" width="275" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="iZG-hB-PvB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ji-ox-4AT">
+                                        <rect key="frame" x="0.0" y="320" width="275" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="k2y-bX-WEO"/>
                                         </constraints>
@@ -227,7 +241,7 @@
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ech-pH-1oM">
-                                        <rect key="frame" x="0.0" y="320" width="275" height="50"/>
+                                        <rect key="frame" x="0.0" y="400" width="275" height="50"/>
                                         <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="K7X-77-Q67"/>
@@ -241,13 +255,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qak-5r-3mF">
-                                        <rect key="frame" x="0.0" y="400" width="275" height="24"/>
+                                        <rect key="frame" x="0.0" y="480" width="275" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esA-6D-eLn">
-                                        <rect key="frame" x="0.0" y="454" width="275" height="50"/>
+                                        <rect key="frame" x="0.0" y="534" width="275" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="NPQ-yl-f4L"/>
                                         </constraints>
@@ -274,6 +288,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="EUS-oh-FOR"/>
                     <connections>
+                        <outlet property="dateOfBirth" destination="41r-um-XNM" id="h4t-Ve-g5Y"/>
                         <outlet property="emailField" destination="hDq-Dj-NZA" id="BMT-Zu-05t"/>
                         <outlet property="errorLabel" destination="qak-5r-3mF" id="udm-m9-omh"/>
                         <outlet property="fullNameField" destination="26n-74-n07" id="F6b-BX-1TA"/>
@@ -285,7 +300,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7XF-M3-1Bu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3612" y="563"/>
+            <point key="canvasLocation" x="3612" y="562.3152709359606"/>
         </scene>
         <!--Forgot Pass View Controller-->
         <scene sceneID="7Ri-FN-qRn">
@@ -414,7 +429,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="uBF-PU-oA9"/>
                     <connections>
-                        <segue destination="EnL-eU-DRa" kind="show" identifier="UsersVC" id="W9b-nw-n3h"/>
+                        <segue destination="EnL-eU-DRa" kind="show" identifier="UsersVC" id="JSL-sR-w6o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aD6-UO-WUY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -456,7 +471,7 @@
                     <navigationItem key="navigationItem" id="4Op-QG-NCy"/>
                     <connections>
                         <outlet property="usersTable" destination="vS2-Bi-QAb" id="0Kv-qk-SlC"/>
-                        <segue destination="nzE-q9-8qj" kind="show" identifier="ChatVC" id="gkG-DF-ug2"/>
+                        <segue destination="nzE-q9-8qj" kind="show" identifier="ChatVC" id="cmh-Zi-ap4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2nJ-rd-IOt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -487,11 +502,11 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVf-uK-bzR">
-                                        <rect key="frame" x="278" y="16" width="40" height="30"/>
+                                        <rect key="frame" x="278" y="16.666666666666664" width="40" height="29.333333333333336"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="2cU-gE-hb4"/>
                                         </constraints>
-                                        <state key="normal" image="paperplane.fill" catalog="system"/>
+                                        <state key="normal" backgroundImage="paperplane.fill" catalog="system"/>
                                         <connections>
                                             <action selector="sendButtonTapped:" destination="nzE-q9-8qj" eventType="touchUpInside" id="sYd-0J-5if"/>
                                         </connections>
@@ -528,7 +543,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wxu-am-oLb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6156" y="678"/>
+            <point key="canvasLocation" x="6118" y="766"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HWz-Ng-mby">
@@ -562,7 +577,7 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tpO-M3-YCZ"/>
+        <segue reference="C1u-xs-9oD"/>
         <segue reference="BV1-Tg-qWx"/>
     </inferredMetricsTieBreakers>
 </document>

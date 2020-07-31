@@ -18,16 +18,44 @@ class RegisterViewController: UIViewController {
     
     @IBOutlet weak var passwordField: UITextField!
     
+    
+    @IBOutlet weak var dateOfBirth: UITextField!
+    
     @IBOutlet weak var phoneNumberField: UITextField!
     
     @IBOutlet weak var registerButton: UIButton!
+     let db = Firestore.firestore()
+    let picker = UIDatePicker()
     
     @IBOutlet weak var errorLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupElements()
-        
+        showDatePicker()
         }
+    
+    func showDatePicker() {
+        picker.datePickerMode = .date
+        
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donedatePicker))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelDatePicker))
+        toolbar.setItems([cancelButton,spaceButton,doneButton], animated: false)
+        dateOfBirth.inputAccessoryView = toolbar
+        dateOfBirth.inputView = picker
+    }
+    @objc func donedatePicker() {
+           let formatter = DateFormatter()
+           formatter.dateFormat = "dd/MM/yyyy"
+           dateOfBirth.text = formatter.string(from: picker.date)
+           self.view.endEditing(true)
+       }
+       
+       @objc func cancelDatePicker() {
+           self.view.endEditing(true)
+       }
     
     func setupElements(){
         // hide the error label
@@ -41,6 +69,7 @@ class RegisterViewController: UIViewController {
         if fullNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             emailField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             passwordField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            dateOfBirth.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             phoneNumberField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             return "Please fill all the fields"
         }
@@ -73,6 +102,7 @@ class RegisterViewController: UIViewController {
             let fullName = fullNameField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let email = emailField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let pass = passwordField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let dob = dateOfBirth.text?.trimmingCharacters(in: .whitespacesAndNewlines)
             let phoneNum = phoneNumberField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             // create a User
             Auth.auth().createUser(withEmail: email, password: pass) { (result, err) in
@@ -81,8 +111,7 @@ class RegisterViewController: UIViewController {
                     self.errorMessage("Email already exists")
                 }else {
                     // the user created successfully
-                     let db = Firestore.firestore()
-                   db.collection("users").addDocument(data: ["fullName":fullName, "phoneNumber":phoneNum, "uid": result!.user.uid]) { (er) in
+                    self.db.collection("users").addDocument(data: ["fullName":fullName, "phoneNumber":phoneNum, "DOB": dob!, "uid": result!.user.uid]) { (er) in
                         if er != nil {
                             self.errorMessage("Please enter the data again and submit the details")
                         }

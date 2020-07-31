@@ -9,8 +9,9 @@
 import UIKit
 import Firebase
 
-class ChatViewController: UIViewController {
+class ChatViewController: UIViewController, UITableViewDataSource {
     
+    var messageReciever: Users?
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -18,6 +19,8 @@ class ChatViewController: UIViewController {
     var db = Firestore.firestore()
     
     var message: [Messages] = []
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,8 +38,8 @@ class ChatViewController: UIViewController {
                 if let snapShot = querySnapShot?.documents {
                     for doc in snapShot {
                         let data = doc.data()
-                        if let messageSender1 = data["sender"] as? String, let messageText1 = data["body"] as? String {
-                            let newMessage = Messages(sender: messageSender1, body: messageText1)
+                        if let messageSender1 = data["sender"] as? String, let messageText1 = data["body"] as? String, let reciever = data["Reciever"] as? String {
+                            let newMessage = Messages(sender: messageSender1, body: messageText1, reciever: reciever )
                             self.message.append(newMessage)
                             DispatchQueue.main.async {
                                 self.tableView.reloadData()
@@ -52,8 +55,9 @@ class ChatViewController: UIViewController {
     }
     
     @IBAction func sendButtonTapped(_ sender: UIButton) {
-        if let messageText = inputTextMessage.text, let messageSender = Auth.auth().currentUser?.email {
-            db.collection("TextMessages").addDocument(data: ["sender": messageSender, "body": messageText, "Date": Date().timeIntervalSince1970]) { (err) in
+        if let messageText = inputTextMessage.text, let messageSender = Auth.auth().currentUser?.email, let recieverMessage = messageReciever {
+            db.collection("TextMessages").addDocument(data: ["Users": ["sender": messageSender,"Reciever": recieverMessage.userId], "body": messageText, "Date": Date().timeIntervalSince1970])
+            { (err) in
                 if let e = err {
                     print("Something went wrong\(e)")
                 }else {
@@ -65,9 +69,8 @@ class ChatViewController: UIViewController {
         }
         
     }
-}
-extension ChatViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return message.count
     }
     
@@ -87,6 +90,5 @@ extension ChatViewController: UITableViewDataSource {
         }
         return cell
     }
-    
-    
 }
+

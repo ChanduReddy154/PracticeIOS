@@ -11,4 +11,9 @@ import Foundation
 struct Users {
     let userId: String
     let fullName: String
+   
 }
+
+//struct RawUserData {
+//    let uid : String
+//}

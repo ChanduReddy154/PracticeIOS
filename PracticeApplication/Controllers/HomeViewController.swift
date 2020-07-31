@@ -10,6 +10,8 @@ import UIKit
 import Firebase
 
 class HomeViewController: UIViewController {
+    
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +20,10 @@ class HomeViewController: UIViewController {
     
     @IBAction func chaqtButtonTapped(_ sender: UIButton) {
         performSegue(withIdentifier: Constants.StoryBoard.usersView, sender: self)
-    }
+        
+        }
+    
+   
     
   
     @IBAction func logoutButton(_ sender: UIButton) {

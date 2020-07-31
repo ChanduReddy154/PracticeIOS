@@ -69,8 +69,6 @@ class LoginViewController: UIViewController {
         }
         
         }
-    
-    
     @IBAction func forgotPassTapped(_ sender: UIButton) {
         performSegue(withIdentifier: Constants.StoryBoard.forgotPass, sender: self)
     }
